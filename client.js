@@ -110,3 +110,42 @@ for(let house of houses) {
     let result = protectHome(house);
     console.log(result);
 }
+
+// What words do you consider to be silly?
+
+// INPUT: A word. Datatype: string.
+// OUTPUT: True or False. Datatype: boolean.
+
+// Declare a function called "isWordSilly"
+// This function takes a single argument named "word"
+// and returns a boolean
+function isWordSilly(word) {
+  // Creating/instantiating a variable named "sillyWords" AND
+  // Assigning a value to sillyWords: An array of strings
+  let sillyWords = ['squeegee', 'barnacle', 'quagmire', 'loofah'];
+  // Looping through the sillyWords array.
+  // In each iteration of the loop, we create a variable called
+  //   "sillyWord" and give it the value of the current "thing" in
+  //   the array we're looping through:
+  for (let sillyWord of sillyWords) {
+    // Compare sillyWord to word to see if
+    // they are equal. This comparison is an expression
+    // that resolves to a boolean
+    if (sillyWord === word) {
+      // If this comparison evaluates to true, return true
+      // This terminates execution of the function
+      // (ie, the function stops here!)
+      return true;
+    }
+  }
+  // We looped. We found no match. We return false:
+  return false;
+}
+
+
+
+
+
+// console.log('tennis should be false', isWordSilly('tennis'))
+// console.log('barnacle should be true', isWordSilly('barnacle'))
+// console.log('22 should be false', isWordSilly(22))
